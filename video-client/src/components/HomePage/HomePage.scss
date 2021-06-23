@@ -9,8 +9,6 @@
       display: flex;
       align-items: center;
       justify-content: space-around;
-      // background-image: url("https://media.istockphoto.com/vectors/agile-icon-vector-id959651186?b=1&k=6&m=959651186&s=612x612&w=0&h=YbKKr3ezmWrrT7sQiSy07z0YvYJvlSoNdO8nmZ7wFmk=");
-      // background-repeat: no-repeat;
       .left-side {
         .content {
         //   border: 1px solid #eee;
@@ -30,13 +28,16 @@
       .middle-side {
         max-width: 500px;
         padding: 30px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         .content {
+          // display: flex;
+          // flex-direction: column;
+          // align-items: center;
           h2 {
             font-size: 35px;
             font-weight: 700;
             color: #6264A7;
             // text-align: center;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
           }
           p {
@@ -44,13 +45,14 @@
             font-size: 18px;
             font-weight: 400;
             color: #5f6368;
+            margin-bottom: 40px;
           }
           .action-btn {
-            margin-top: 30px;
             display: flex;
             align-items: center;
             justify-content: space-between;
             .btn {
+              // margin-bottom: 20px;
               cursor: pointer;
               display: flex;
               align-items: center;
@@ -60,18 +62,18 @@
               border: none;
               outline: none;
               background: none;
-              border-radius: 5px;
-              color: #6264A7;
+              border-radius: 2px;
+              color: #7275c3;
               text-decoration: none;
               .icon-block {
                 padding-right: 10px;
               }
               &:hover {
-                background: azure;
+                background: #d3d3d8;
               }
             }
             .input-block {
-              margin-left: 20px;
+              margin-top: 20px;
               display: flex;
               align-items: center;
               flex: 1;
@@ -82,13 +84,13 @@
                   position: absolute;
                   top: 50%;
                   transform: translate(10px, -50%);
-                  color: #5f6368;
+                  color: #525961;
                 }
                 input {
                   font-size: 16px;
                   height: 48px;
-                  border: 1px solid #ccc;
-                  border-radius: 5px;
+                  border: 1.7px solid #ccc;
+                  border-radius: 2px;
                   padding-left: 35px;
                   width: 100%;
                   box-sizing: border-box;
@@ -99,12 +101,14 @@
           }
         }
         .help-text {
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
           margin-top: 30px;
+          color: #5f6368;
           padding-top: 25px;
           border-top: 1px solid #ddd;
           a {
             text-decoration: none;
-            color: #00796b;
+            color: #6264A7;
           }
         }
       }

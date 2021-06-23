@@ -1,0 +1,12 @@
+.videocall-page {
+    .video-container {
+      height: 100vh;
+      width: 100%;
+      object-fit: cover; // use "cover" to avoid distortion
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: 0;
+    }
+  }
+  
