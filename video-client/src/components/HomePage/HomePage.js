@@ -1,10 +1,42 @@
+
+import { useHistory } from "react-router-dom"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faVideo, faKeyboard } from "@fortawesome/free-solid-svg-icons";
-
 import './HomePage.scss'
 import HeaderHomePage from "../UI/HeaderHomePage/HeaderHomePage";
+import { useState } from "react";
+
+const shortid = require("shortid");
 
 const HomePage = () => {
+
+    const history = useHistory()
+
+    ////////////////////////////////////////////////////////////////////////////////
+    /////////////////////           Functions              /////////////////////////
+    ////////////////////////////////////////////////////////////////////////////////
+
+
+    /* This function starts the call:
+         -Generates unique ID
+         -Redirect to call page */
+
+    const startCall = () => {
+        const unique_id = shortid.generate();
+        history.push(`/${unique_id}#init`);
+    }
+
+    const [url, setURL] = useState('');
+
+    const joinCall = () => {
+        //Get the id. Rest all will already be part of history
+        let pathname = url.split("/").slice(-1);
+        history.push(`${pathname}`);
+    }
+    ////////////////////////////////////////////////////////////////////////////////
+    /////////////////////           Return Script            ///////////////////////
+    ////////////////////////////////////////////////////////////////////////////////
+
     return (
         <div className="home-page">
             <HeaderHomePage />
@@ -22,7 +54,7 @@ const HomePage = () => {
                             Engage with each other using our video call app built using Agile methodology.
                         </p>
                         <div className="action-btn">
-                            <button className="btn purple">
+                            <button className="btn purple" onClick={startCall}>
                                 <FontAwesomeIcon className="icon-block" icon={faVideo} />
                                 Start a New Meeting
                             </button>
@@ -31,9 +63,9 @@ const HomePage = () => {
                             <div className="input-block">
                                 <div className="input-section">
                                     <FontAwesomeIcon className="icon-block" icon={faKeyboard} />
-                                    <input placeholder="Enter link" />
+                                    <input placeholder="Enter link" onChange={e => setURL(e.target.value)} />
                                 </div>
-                                <button className="btn purple">Join Meeting</button>
+                                <button className="btn purple" onClick={joinCall}>Join Meeting</button>
                             </div>
                         </div>
                     </div>

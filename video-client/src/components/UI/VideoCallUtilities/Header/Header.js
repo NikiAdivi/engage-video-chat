@@ -7,9 +7,11 @@ import {
   faUserCircle,
 } from "@fortawesome/free-solid-svg-icons";
 import "./Header.scss";
+import { useEffect } from "react";
 
-const Header = () => {
-  let interval = null;
+const Header = ({setDetailsPopup}) => {
+
+  // let interval = null;
 
   // useEffect(() => {
   //   interval = setInterval(() => setCurrentTime(formatDate()), 1000);
@@ -18,9 +20,13 @@ const Header = () => {
   //   };
   // }, []);
 
+  useEffect(() => {
+    
+  })
+
   return (
     <div className="frame-header">
-      <div className="invite-item">
+      <div className="invite-item" onClick = {() => setDetailsPopup(true)}>
         <div className="icon-block">
           <div className="text-box">Invite</div>
           <FontAwesomeIcon className="icon" icon={faAngleDown} />
