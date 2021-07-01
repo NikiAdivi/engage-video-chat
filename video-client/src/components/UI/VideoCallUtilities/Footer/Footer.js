@@ -11,14 +11,10 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import "./Footer.scss";
 
-const Footer = ({disconnectCall}) => {
+const Footer = ({disconnectCall, isChatWindow, setChatWindow}) => {
   return (
     <div className="footer-item">
       <div className="left-item">
-        {/* <div className="icon-block">
-          <div className="text-box">Meeting Invite</div>
-          <FontAwesomeIcon className="icon" icon={faAngleUp} />
-        </div> */}
       </div>
       <div className="center-item">
         <div className="icon-block">
@@ -34,7 +30,7 @@ const Footer = ({disconnectCall}) => {
           <FontAwesomeIcon className="icon" icon={faDesktop} />
         </div>
         <div className="icon-block">
-          <FontAwesomeIcon className="icon" icon={faCommentAlt} />
+          <FontAwesomeIcon className="icon" icon={faCommentAlt} onClick = {() => setChatWindow(!isChatWindow)} />
         </div>
       </div>
 

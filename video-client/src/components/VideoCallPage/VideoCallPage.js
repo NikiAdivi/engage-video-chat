@@ -29,6 +29,7 @@ const VideoCallPage = () => {
     ////////////////////////////////////////////////////////////////////////////////    
 
     const [detailsPopup, setDetailsPopup] = useState(false);
+    const [isChatWindow, setChatWindow] = useState(false);
     const [isAudio, setAudio] = useState(false);
     const [stream, setStream] = useState();
     const [isPresenting, setPresenting] = useState(false);
@@ -121,8 +122,8 @@ const VideoCallPage = () => {
             {/* <video className="video-container-2" src="" controls></video> */}
             <Header setDetailsPopup={setDetailsPopup} />
             {detailsPopup && <Details setDetailsPopup={setDetailsPopup} url={url} />}
-            <Chat />
-            <Footer disconnectCall = {disconnectCall}/>
+            {isChatWindow && <Chat />}
+            <Footer isChatWindow = {isChatWindow} setChatWindow = {setChatWindow} disconnectCall = {disconnectCall}/>
         </div>
     )
 }
