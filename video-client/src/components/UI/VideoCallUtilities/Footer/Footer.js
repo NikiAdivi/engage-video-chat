@@ -11,7 +11,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import "./Footer.scss";
 
-const Footer = () => {
+const Footer = ({disconnectCall}) => {
   return (
     <div className="footer-item">
       <div className="left-item">
@@ -27,7 +27,7 @@ const Footer = () => {
         <div className="icon-block">
           <FontAwesomeIcon className="icon" icon={faVideo} />
         </div>
-        <div className="icon-block">
+        <div className="icon-block" onClick = {disconnectCall}>
           <FontAwesomeIcon className="icon red" icon={faPhone} />
         </div>
         <div className="icon-block">
