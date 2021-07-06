@@ -13,7 +13,8 @@ import { BASE_URL, GET_CALL_ID, SAVE_CALL_ID, } from "./../../utils/apiEndpoints
 import io from "socket.io-client";
 import Peer from "simple-peer";
 
-let peer = [];
+let peer = null;
+let participants = [];
 const socket = io.connect("http://localhost:4000");
 
 const VideoCallPage = () => {
@@ -42,7 +43,7 @@ const VideoCallPage = () => {
             setDetailsPopup(true);
         }
         initialiseWebRTC();
-        socket.on("code", (data) => {
+        socket.on("user-connected", (data) => {
             peer.signal(data);
         });
     }, [])
@@ -69,6 +70,8 @@ const VideoCallPage = () => {
                     stream: stream_obj,
                 });
 
+                participants.push(peer);
+
                 if (!isAdmin) {
                     getRecieverCode();
                 }
@@ -82,7 +85,7 @@ const VideoCallPage = () => {
                         await postRequest(`${BASE_URL}${SAVE_CALL_ID}`, payload);
                     }
                     else {
-                        socket.emit("code", data, (cbData) => {
+                        socket.emit("join-room", data, participants, (cbData) => {
                             console.log("code sent");
                         });
                     }
