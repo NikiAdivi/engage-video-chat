@@ -1,4 +1,4 @@
-// import { useState } from "react";
+import { useState } from "react";
 import "./Chat.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -8,24 +8,24 @@ import {
   faPaperPlane,
 } from "@fortawesome/free-solid-svg-icons";
 
-const Chat = () => {
-  // const [msg, setMsg] = useState("");
+const Chat = ({sendMessage, messageList}) => {
+  const [message, setMessage] = useState("");
 
-  // const handleChangeMsg = (e) => {
-  //   setMsg(e.target.value);
-  // };
+  const handleChangeMsg = (e) => {
+    setMessage(e.target.value);
+  };
 
-  // const handleKeyDown = (e) => {
-  //   if (e.key === "Enter") {
-  //     sendMsg(msg);
-  //     setMsg("");
-  //   }
-  // };
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter") {
+      sendMessage(message);
+      setMessage("");
+    }
+  };
 
-  // const handleSendMsg = () => {
-  //   sendMsg(msg);
-  //   setMsg("");
-  // };
+  const handleSendMsg = () => {
+    sendMessage(message);
+    setMessage("");
+  };
 
   return (
     <div className="messenger-container">
@@ -51,28 +51,28 @@ const Chat = () => {
         </div>
       </div>
 
-      {/* <div className="chat-section">
+      <div className="chat-section">
         {messageList.map((item) => (
           <div key={item.time} className="chat-block">
             <div className="sender">
               {item.user}
             </div>
-            <p className="msg">{item.msg}</p>
+            <p className="msg">{item.msg_value}</p>
           </div>
         ))}
-      </div> */}
+      </div>
 
       <div className="send-msg-section">
         <input
           placeholder="Send a message to everyone"
-          // value={msg}
-          // onChange={(e) => handleChangeMsg(e)}
-          // onKeyDown={(e) => handleKeyDown(e)}
+          value={message}
+          onChange={(e) => handleChangeMsg(e)}
+          onKeyDown={(e) => handleKeyDown(e)}
         />
         <FontAwesomeIcon
           className="icon"
           icon={faPaperPlane}
-          // onClick={handleSendMsg}
+          onClick={handleSendMsg}
         />
       </div>
     </div>

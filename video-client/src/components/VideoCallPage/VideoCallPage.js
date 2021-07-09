@@ -1,5 +1,5 @@
 import { useHistory, useParams } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useReducer } from "react";
 
 import './VideoCallPage.scss'
 
@@ -7,6 +7,7 @@ import Chat from "./../UI/VideoCallUtilities/Chat/Chat";
 import Footer from "./../UI/VideoCallUtilities/Footer/Footer";
 import Details from "./../UI/VideoCallUtilities/Details/Details";
 import Header from '../UI/VideoCallUtilities/Header/Header';
+import MessageListReducer from "../../reducers/MessageListReducer";
 
 import { getRequest, postRequest } from "./../../utils/apiRequests";
 import { BASE_URL, GET_CALL_ID, SAVE_CALL_ID, } from "./../../utils/apiEndpoints";
@@ -35,8 +36,12 @@ const VideoCallPage = () => {
     const [isVideo, setVideo] = useState(true);
 
     const [stream, setStream] = useState();
-    const [screenStream, shareScreen] = useState();
+
+    const [screenStream, setScreenScreen] = useState();
     const [isPresenting, setPresenting] = useState(false);
+
+    const [messageAlertPopup, setMessageAlert] = useState({});
+    const [messageList, messageListReducer] = useReducer(MessageListReducer, []);
 
     useEffect(() => {
         if (isAdmin) {
@@ -108,25 +113,59 @@ const VideoCallPage = () => {
                     video.play();
                 });
 
+                peer.on("data", (message) => {
+                    // clearTimeout(alertTimeout);
+                    messageListReducer({
+                        type: "addMessageToList",
+                        payload: {user: "Other", msg_value: message.toString(), time: Date.now(),},
+                    });
+
+                    // setMessageAlert({
+                    //   alert: true,
+                    //   isPopup: true,
+                    //   payload: {
+                    //     user: "other",
+                    //     msg: data.toString(),
+                    //   },
+                    // });
+
+                    // alertTimeout = setTimeout(() => {
+                    //   setMessageAlert({
+                    //     ...messageAlert,
+                    //     isPopup: false,
+                    //     payload: {},
+                    //   });
+                    // }, 10000);
+                });
+
             })
             .catch(() => { });
+    };
+
+    const sendMessage = (message) => {
+        peer.send(message);
+        messageListReducer({
+            type: "addMessageToList",
+            payload: { user: "You", msg_value: message, time: Date.now(), },
+        });
     };
 
     const toggleAudio = (value) => {
         stream.getAudioTracks()[0].enabled = value;
         setAudio(value);
     };
-    
+
     const toggleVideo = (value) => {
         stream.getVideoTracks()[0].enabled = value;
         setVideo(value);
     };
-    
+
     const disconnectCall = () => {
         peer.destroy();
         history.push("/");
         window.location.reload();
     };
+
     ////////////////////////////////////////////////////////////////////////////////
     /////////////////////           Return Script            ///////////////////////
     ////////////////////////////////////////////////////////////////////////////////    
@@ -137,9 +176,9 @@ const VideoCallPage = () => {
             {/* <video className="video-container-2" src="" controls></video> */}
             <Header setDetailsPopup={setDetailsPopup} />
             {detailsPopup && <Details setDetailsPopup={setDetailsPopup} url={url} />}
-            {isChatWindow && <Chat />}
-            <Footer isChatWindow={isChatWindow} setChatWindow={setChatWindow} isAudio = {isAudio} toggleAudio = {toggleAudio} 
-            isVideo = {isVideo} toggleVideo = {toggleVideo} disconnectCall={disconnectCall} />
+            {isChatWindow && <Chat sendMessage = {sendMessage} messageList = {messageList} />}
+            <Footer isChatWindow={isChatWindow} setChatWindow={setChatWindow} isAudio={isAudio} toggleAudio={toggleAudio}
+                isVideo={isVideo} toggleVideo={toggleVideo} disconnectCall={disconnectCall} />
         </div>
     )
 }

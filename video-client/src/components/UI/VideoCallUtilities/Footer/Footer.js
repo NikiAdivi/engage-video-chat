@@ -36,8 +36,9 @@ const Footer = ({disconnectCall, isChatWindow, setChatWindow, isAudio, toggleAud
 
       <div className="right-item">
         <div className="icon-block">
-          <FontAwesomeIcon className="icon" icon={faClosedCaptioning} />
-          <p className="title">Turn on captions</p>
+          {/* <FontAwesomeIcon className="icon" icon={faClosedCaptioning} /> */}
+          {/* <p className="title">Turn on captions</p> */}
+          <p></p>
         </div>
       </div>
     </div>
