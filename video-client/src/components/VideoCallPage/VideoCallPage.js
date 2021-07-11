@@ -10,13 +10,13 @@ import Header from '../UI/VideoCallUtilities/Header/Header';
 import MessageListReducer from "../../reducers/MessageListReducer";
 
 import { getRequest, postRequest } from "./../../utils/apiRequests";
-import { BASE_URL, GET_CALL_ID, SAVE_CALL_ID, } from "./../../utils/apiEndpoints";
+import { GET_CALL_ID, SAVE_CALL_ID, } from "./../../utils/apiEndpoints";
 import io from "socket.io-client";
 import Peer from "simple-peer";
 
 let peer = null;
 let participants = [];
-const socket = io.connect("http://localhost:4000");
+const socket = io.connect();
 
 const VideoCallPage = () => {
 
@@ -54,7 +54,7 @@ const VideoCallPage = () => {
     }, [])
 
     const getRecieverCode = async () => {
-        const response = await getRequest(`${BASE_URL}${GET_CALL_ID}/${id}`);
+        const response = await getRequest(`${GET_CALL_ID}/${id}`);
         if (response.code) {
             peer.signal(response.code);
         }
@@ -87,7 +87,7 @@ const VideoCallPage = () => {
                             id,
                             signalData: data,
                         };
-                        await postRequest(`${BASE_URL}${SAVE_CALL_ID}`, payload);
+                        await postRequest(`${SAVE_CALL_ID}`, payload);
                     }
                     else {
                         socket.emit("join-room", data, participants, (cbData) => {

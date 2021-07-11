@@ -1,4 +1,4 @@
-const redisClient = require("./config/redis");
+const redisClient = require("./config-redis/redis");
 
 exports.saveCall = (key, value) => {
   return new Promise((resolve, reject) => {
