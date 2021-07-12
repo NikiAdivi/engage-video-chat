@@ -1,5 +1,7 @@
 const io = require("../server").io;
 
+/*When there is a connection from the clinet to the socket*/
+
 module.exports = (socket) => {
   try {
     console.log("Connected");

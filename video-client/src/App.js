@@ -17,9 +17,6 @@ function App() {
         <Route path="*">
           <ErrorPage />
         </Route>
-        {/* <Route path="/signup">
-          <Signup />
-        </Route> */}
       </Switch>
     </Router>
   );

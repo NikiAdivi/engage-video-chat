@@ -8,43 +8,40 @@ import {
   faPaperPlane,
 } from "@fortawesome/free-solid-svg-icons";
 
-const Chat = ({sendMessage, messageList}) => {
+const Chat = ({ sendMessage, messageList }) => {
+  ////////////////////////////////////////////////////////////////////////////////
+  ///////////////////////      State Variables         ///////////////////////////
+  ////////////////////////////////////////////////////////////////////////////////
+
   const [message, setMessage] = useState("");
 
-  const handleChangeMsg = (e) => {
+  ////////////////////////////////////////////////////////////////////////////////
+  /////////////////////      Utility Functions           /////////////////////////
+  ////////////////////////////////////////////////////////////////////////////////
+
+  const changeInputMessage = (e) => {
     setMessage(e.target.value);
   };
 
-  const handleKeyDown = (e) => {
+  const onEnter = (e) => {
     if (e.key === "Enter") {
       sendMessage(message);
       setMessage("");
     }
   };
 
-  const handleSendMsg = () => {
+  const sendMessageInChat = () => {
     sendMessage(message);
     setMessage("");
   };
 
+  ////////////////////////////////////////////////////////////////////////////////
+  /////////////////////           Return Script            ///////////////////////
+  ////////////////////////////////////////////////////////////////////////////////
+
   return (
     <div className="messenger-container">
-      {/* <div className="messenger-header">
-        <h3>Meeting details</h3>
-        <FontAwesomeIcon
-          className="icon"
-          icon={faTimes}
-          // onClick={() => {
-          //   setIsMessenger(false);
-          // }}
-        />
-      </div> */}
-
       <div className="messenger-header-tabs">
-        {/* <div className="tab">
-          <FontAwesomeIcon className="icon" icon={faUserFriends} />
-          <p>People (1)</p>
-        </div> */}
         <div className="tab active">
           <FontAwesomeIcon className="icon" icon={faCommentAlt} />
           <p>Chat</p>
@@ -54,9 +51,7 @@ const Chat = ({sendMessage, messageList}) => {
       <div className="chat-section">
         {messageList.map((item) => (
           <div key={item.time} className="chat-block">
-            <div className="sender">
-              {item.user}
-            </div>
+            <div className="sender">{item.user}</div>
             <p className="msg">{item.msg_value}</p>
           </div>
         ))}
@@ -66,13 +61,13 @@ const Chat = ({sendMessage, messageList}) => {
         <input
           placeholder="Send a message to everyone"
           value={message}
-          onChange={(e) => handleChangeMsg(e)}
-          onKeyDown={(e) => handleKeyDown(e)}
+          onChange={(e) => changeInputMessage(e)}
+          onKeyDown={(e) => onEnter(e)}
         />
         <FontAwesomeIcon
           className="icon"
           icon={faPaperPlane}
-          onClick={handleSendMsg}
+          onClick={sendMessageInChat}
         />
       </div>
     </div>

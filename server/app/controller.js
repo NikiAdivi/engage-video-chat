@@ -1,5 +1,10 @@
+////////////////////////////////////////////////////////////////////////////////
+/////////////////////         Controller (MVC)           ///////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
 const { saveCall, getCall } = require("./model");
 
+/* Calls the saveCall function of the model to update database*/
 exports.saveCall = async (req, res) => {
   try {
     const { id, signalData } = req.body;
@@ -10,6 +15,7 @@ exports.saveCall = async (req, res) => {
   }
 };
 
+/* Calls the getCall function of the model to update database*/
 exports.getCall = async (req, res) => {
   try {
     const { id } = req.params;

@@ -2,7 +2,7 @@ require("dotenv").config();
 const express = require("express");
 const http = require("http");
 const cors = require("cors");
-const path = require('path')
+const path = require("path");
 const port = process.env.PORT || 4000;
 const app = express();
 const server = http.createServer(app);
@@ -16,22 +16,23 @@ app.use([
 ]);
 
 // Have Node serve the files for our built React app
-app.use(express.static(path.resolve(__dirname, '../video-client/build')));
+app.use(express.static(path.resolve(__dirname, "../video-client/build")));
 
-// Handle GET requests to /api route
+/* Handle GET requests to /api route */
 app.get("/api", (req, res) => {
   res.json({ message: "Hello from server!" });
 });
 
-// All other GET requests not handled before will return our React app
-app.get('*', (req, res) => {
-  res.sendFile(path.resolve(__dirname, '../video-client/build', 'index.html'));
+/*All other GET requests not handled before will return our React app*/
+app.get("*", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "../video-client/build", "index.html"));
 });
 
-const io = (module.exports.io = require('socket.io')(server, {
+/* Socket on server side used to establish a connection between two peers*/
+const io = (module.exports.io = require("socket.io")(server, {
   cors: {
-      origin: '*',
-  }
+    origin: "*",
+  },
 }));
 
 const socketManager = require("./app/socketManager");
