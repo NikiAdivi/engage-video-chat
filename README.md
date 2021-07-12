@@ -1,6 +1,11 @@
+<img src="https://static.vecteezy.com/system/resources/thumbnails/001/810/990/small/illustration-of-two-happy-people-talking-via-video-call-smiling-men-and-women-work-and-communicate-remotely-team-meeting-illustration-in-flat-design-vector.jpg" alt="Logo" width="150" height="150" />
 <h1 align="center">Engage Video Chat App</h1>
-> A simple non-pipelined 32-bit MIPS Simulator in Verilog
+An easy to use 1:1 video calling app 
 
+This project was developed as part of [Microsoft Engage 2021](https://microsoft.acehacker.com/engage2021/) Program. 
+Agile Development Methodology was used while developing this application. You can find details about the agile sprints [here]()
+
+<!-- 
 ## Install
 
 ```sh
@@ -78,9 +83,9 @@ We have created separate modules for fetch, decode, execute, memory and writebac
 
 * Github: [@soham-joshi](https://github.com/soham-joshi)
 
-
+ -->
 ## 📝 License
 
-Copyright © 2019 [Sai Rithwik M](https://github.com/DaKeiser).<br />
-This project is [MIT](https://github.com/DaKeiser/mips/blob/master/LICENSE) licensed.
+Copyright © 2019 [Nikitha Adivi](https://github.com/NikiAdivi).<br />
+This project is [MIT](https://github.com/NikiAdivi/engage-video-chat/blob/master/LICENSE) licensed.
 _
