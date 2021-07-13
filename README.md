@@ -1,9 +1,9 @@
 <img src="https://static.vecteezy.com/system/resources/thumbnails/001/810/990/small/illustration-of-two-happy-people-talking-via-video-call-smiling-men-and-women-work-and-communicate-remotely-team-meeting-illustration-in-flat-design-vector.jpg" align = "center" alt="Logo" width="150" height="150" />
 <h1 align="center">Engage Video Chat App</h1>
-An easy to use 1:1 video calling app 
+An easy to use and scalable 1:1 video calling app with the following functionalities
 
 This project was developed as part of [Microsoft Engage 2021](https://microsoft.acehacker.com/engage2021/) Program. 
-Agile Development Methodology was used while developing this application. You can find details about the agile sprints [here]()
+Agile Development Methodology was used while developing this application. You can find details about the agile sprint details [here](https://www.notion.so/cd6fd2f396fc45b2a2e51a97d1f02e32?v=e80dfea049f949ffa3158f85f873f105)
 
 <!-- 
 ## Install
