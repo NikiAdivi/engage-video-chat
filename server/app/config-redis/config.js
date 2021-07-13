@@ -6,8 +6,8 @@
  * 
  */
 
-const REDISCACHEHOSTNAME = "webapp-engage.redis.cache.windows.net";
-const REDISCACHEKEY = "7YdKHwKy6QeopiBd1cF2kfaLAZhf4HjlzqSzCScqwJs=";
+const REDISCACHEHOSTNAME = "";
+const REDISCACHEKEY = "";
 const REDISPORT = 6380;
 
 module.exports = {
