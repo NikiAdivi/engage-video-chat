@@ -1,7 +1,7 @@
 <p align = "center"><img align = "center" src="https://static.vecteezy.com/system/resources/thumbnails/001/810/990/small/illustration-of-two-happy-people-talking-via-video-call-smiling-men-and-women-work-and-communicate-remotely-team-meeting-illustration-in-flat-design-vector.jpg" align = "center" alt="Logo" width="150" height="150" /></p>
 <h1 align="center">Engage Video Calling WebApp</h1>
 <p align = "center"> An easy to use and scalable 1:1 video calling app!! </p>
-<p align = "center"> Link to the website: [https://engage-video-calling.azurewebsites.net/](https://engage-video-calling.azurewebsites.net/)</p>
+<p align = "center"> Link to the website: https://engage-video-calling.azurewebsites.net/ </p>
 ## Features
 - 1:1 Video and Audio connect
 - Invite using meeting link
@@ -14,10 +14,10 @@ This project was developed as part of [Microsoft Engage 2021](https://microsoft.
 Agile Development Methodology was used while developing this application. You can find details about the agile sprint details in my [notion page](https://www.notion.so/cd6fd2f396fc45b2a2e51a97d1f02e32?v=e80dfea049f949ffa3158f85f873f105)
 
 ## Sneak peak into the UI
-![Instructions File](https://github.com/DaKeiser/mips/blob/master/assets/Instructions_file.png)
-![Instructions File](https://github.com/DaKeiser/mips/blob/master/assets/Instructions_file.png)
-![Instructions File](https://github.com/DaKeiser/mips/blob/master/assets/Instructions_file.png)
-![Instructions File](https://github.com/DaKeiser/mips/blob/master/assets/Instructions_file.png)
+![Instructions File](https://github.com/NikiAdivi/engage-video-chat/blob/azure-redis/UI%20Images/HomePage.png)
+![Instructions File](https://github.com/NikiAdivi/engage-video-chat/blob/azure-redis/UI%20Images/VideoCall.png)
+![Instructions File](https://github.com/NikiAdivi/engage-video-chat/blob/azure-redis/UI%20Images/Chat.png)
+![Instructions File](https://github.com/NikiAdivi/engage-video-chat/blob/azure-redis/UI%20Images/Screenshare.png)
 
 <!-- 
 ## Install
