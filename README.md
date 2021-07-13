@@ -1,4 +1,4 @@
-<img align = "centet" src="https://static.vecteezy.com/system/resources/thumbnails/001/810/990/small/illustration-of-two-happy-people-talking-via-video-call-smiling-men-and-women-work-and-communicate-remotely-team-meeting-illustration-in-flat-design-vector.jpg" align = "center" alt="Logo" width="150" height="150" />
+<p><img align = "center" src="https://static.vecteezy.com/system/resources/thumbnails/001/810/990/small/illustration-of-two-happy-people-talking-via-video-call-smiling-men-and-women-work-and-communicate-remotely-team-meeting-illustration-in-flat-design-vector.jpg" align = "center" alt="Logo" width="150" height="150" /></p>
 <h1 align="center">Engage Video Calling WebApp</h1>
 <p align = "center"> An easy to use and scalable 1:1 video calling app!! </p>
 
