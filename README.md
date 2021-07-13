@@ -15,10 +15,10 @@ This project was developed as part of [Microsoft Engage 2021](https://microsoft.
 Agile Development Methodology was used while developing this application. You can find details about the agile sprint details in my [notion page](https://www.notion.so/cd6fd2f396fc45b2a2e51a97d1f02e32?v=e80dfea049f949ffa3158f85f873f105)
 
 ## Sneak peak into the UI
-![Instructions File](https://github.com/NikiAdivi/engage-video-chat/blob/azure-redis/UI%20Images/HomePage.png | width = 200)
-![Instructions File](https://github.com/NikiAdivi/engage-video-chat/blob/azure-redis/UI%20Images/VideoCall.png)
-![Instructions File](https://github.com/NikiAdivi/engage-video-chat/blob/azure-redis/UI%20Images/Chat.png)
-![Instructions File](https://github.com/NikiAdivi/engage-video-chat/blob/azure-redis/UI%20Images/Screenshare.png)
+<p align = "center"><img align = "center" src="https://github.com/NikiAdivi/engage-video-chat/blob/azure-redis/UI%20Images/HomePage.png" align = "center" alt="Logo" width="150" height="150" /></p>
+<p align = "center"><img align = "center" src="https://github.com/NikiAdivi/engage-video-chat/blob/azure-redis/UI%20Images/VideoCall.png" align = "center" alt="Logo" width="150" height="150" /></p>
+<p align = "center"><img align = "center" src="https://github.com/NikiAdivi/engage-video-chat/blob/azure-redis/UI%20Images/Chat.png" align = "center" alt="Logo" width="150" height="150" /></p>
+<p align = "center"><img align = "center" src="https://github.com/NikiAdivi/engage-video-chat/blob/azure-redis/UI%20Images/Screenshare.png" align = "center" alt="Logo" width="150" height="150" /></p>
 
 <!-- 
 ## Install
