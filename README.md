@@ -14,6 +14,28 @@
 This project was developed as part of [Microsoft Engage 2021](https://microsoft.acehacker.com/engage2021/) Program. 
 Agile Development Methodology was used while developing this application. You can find details about the agile sprint details in my [notion page](https://www.notion.so/cd6fd2f396fc45b2a2e51a97d1f02e32?v=e80dfea049f949ffa3158f85f873f105)
 
+## Installation
+```
+$ git clone git@github.com:NikiAdivi/engage-video-chat.git
+```
+
+## Setup
+To run this project, follow these steps:
+
+```
+$ cd engage-video-chat/server/app/config
+```
+
+- Copy and Paste the `config.js.example` file and rename it as `config.js`
+- You then need to create an account and a redis cache instance on [Azure](https://azure.microsoft.com/en-in/) and paste rediscachehostname that is available on the home page and rediscacheaccesskey that is available in the access keys tab in the field `REDISCACHEHOSTNAME` and `REDISCACHEACCESSKEY`.
+
+To run:
+
+```sh
+$ docker-compose build
+$ docker-compose up --build
+```
+
 ## Sneak peak into the UI
 <table border="0">
  <tr>
