@@ -14,11 +14,12 @@
 This project was developed as part of [Microsoft Engage 2021](https://microsoft.acehacker.com/engage2021/) Program. 
 Agile Development Methodology was used while developing this application. You can find details about the agile sprint details in my [notion page](https://www.notion.so/cd6fd2f396fc45b2a2e51a97d1f02e32?v=e80dfea049f949ffa3158f85f873f105)
 
-### Technologies Used
-- NodeJS
-- ReactJS
-- Express
-- REDIS for database
+### Technologies and source code
+MVC architecture has been followed
+- NodeJS - `server/app` folder contains the code for the backend 
+- ReactJS - `video-client` folder has the code for the frontend
+- Express - `server/server.js` creates the express app
+- REDIS for database - `server/app/config-redis` has code on creating the redis client
 
 ## Requirements
 ### To install NodeJS
@@ -36,8 +37,6 @@ $ git clone git@github.com:NikiAdivi/engage-video-chat.git
 ```
 
 ## Setup
-
-### To run this project, follow these steps:
 
 ```
 $ cd engage-video-chat/server/app/config-redis
