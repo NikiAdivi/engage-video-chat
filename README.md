@@ -17,12 +17,12 @@ Agile Development Methodology was used while developing this application. You ca
 ## Sneak peak into the UI
 <table border="0">
  <tr>
-    <td><p align = "center"><img align = "center" src="https://github.com/NikiAdivi/engage-video-chat/blob/azure-redis/UI%20Images/HomePage.png" align = "center" alt="Logo" width="500" height="300" /></p></td>
-    <td><p align = "center"><img align = "center" src="https://github.com/NikiAdivi/engage-video-chat/blob/azure-redis/UI%20Images/VideoCall.png" align = "center" alt="Logo" width="500" height="300" /></p></td>
+  <td><b>HomePage</b><br><p align = "center"><img align = "center" src="https://github.com/NikiAdivi/engage-video-chat/blob/azure-redis/UI%20Images/HomePage.png" align = "center" alt="Logo" width="500" height="300" /></p></td>
+    <td><b>CallPage</b><br><p align = "center"><img align = "center" src="https://github.com/NikiAdivi/engage-video-chat/blob/azure-redis/UI%20Images/VideoCall.png" align = "center" alt="Logo" width="500" height="300" /></p></td>
  </tr>
  <tr>
-    <td><p align = "center"><img align = "center" src="https://github.com/NikiAdivi/engage-video-chat/blob/azure-redis/UI%20Images/Chat.png" align = "center" alt="Logo" width="500" height="300" /></p></td>
-    <td><p align = "center"><img align = "center" src="https://github.com/NikiAdivi/engage-video-chat/blob/azure-redis/UI%20Images/Screenshare.png" align = "center" alt="Logo" width="500" height="300" /></p></td>
+    <td><b>Chat</b><br><p align = "center"><img align = "center" src="https://github.com/NikiAdivi/engage-video-chat/blob/azure-redis/UI%20Images/Chat.png" align = "center" alt="Logo" width="500" height="300" /></p></td>
+    <td><b>ScreenShare</b><br><p align = "center"><img align = "center" src="https://github.com/NikiAdivi/engage-video-chat/blob/azure-redis/UI%20Images/Screenshare.png" align = "center" alt="Logo" width="500" height="300" /></p></td>
  </tr>
 </table>
 
