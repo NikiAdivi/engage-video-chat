@@ -66,6 +66,6 @@ $ docker-compose up
 
 ## 📝 License
 
-Copyright © 2019 [Nikitha Adivi](https://github.com/NikiAdivi).<br />
+Copyright © 2021 [Nikitha Adivi](https://github.com/NikiAdivi).<br />
 This project is [MIT](https://github.com/NikiAdivi/engage-video-chat/blob/master/LICENSE) licensed.
 _
